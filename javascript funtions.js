@@ -96,7 +96,6 @@ function dataUsageFeedback(planLimit, day, usage) {
     let projectedUsage = remainingDays * currentAvg;
     let statusMsg;
 
-     
     if (currentAvg > projectedAvg) {
         statusMsg = "EXCEEDING";
     } else if (currentAvg < projectedAvg) {
@@ -107,7 +106,7 @@ function dataUsageFeedback(planLimit, day, usage) {
     
     
 
-    console.log(`${day} day(s) used, ${remainingDays} day(s) remaining
+       console.log(`${day} day(s) used, ${remainingDays} day(s) remaining
     Average projected use: ${projectedAvg.toFixed(2)} GB/day.
     You are ${statusMsg} your average daily use (${currentAvg.toFixed(2)} GB/day),
     continuing this usage, you'll end up using ${planLimit - (usage + projectedUsage)
@@ -117,3 +116,4 @@ function dataUsageFeedback(planLimit, day, usage) {
     }
 
     dataUsageFeedback(50, 12, 25);
+
